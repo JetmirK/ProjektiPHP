@@ -19,7 +19,7 @@ session_start();
     .ushqimet{
 	font-size:1em;
 	font:bold;
-	margin-top: 71em;
+	margin-top: 59em;
     margin-left: -12px;
 	float:left;
     width: 280px;
@@ -31,7 +31,7 @@ session_start();
 	.twitter{
 	font-size:1em;
 	font:bold;
-	margin-top: 23em;
+	margin-top: 6em;
 	float:left;
     width: 280px;
     background-color:rgba(224, 224, 209, 0.7);
@@ -52,9 +52,27 @@ session_start();
   text-align: center;
   border:solid 1px #669999;
 }
-			
+
+
 			
 		</style>
+		<script>
+function showUser(str) {
+  if (str == "") {
+    document.getElementById("txtHint").innerHTML = "";
+    return;
+  } else {
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        document.getElementById("txtHint").innerHTML = this.responseText;
+      }
+    };
+    xmlhttp.open("GET","getuser.php?q="+str,true);
+    xmlhttp.send();
+  }
+}
+</script>
     </head>
 	
 	
@@ -226,6 +244,8 @@ fclose($myfile);
 
 		
 <!--Ora-->
+
+        
 		<div class="all">
        
         <?php
@@ -233,7 +253,12 @@ fclose($myfile);
         echo "*Today is " . date("l");
         ?>
 		</div>
-		
+
+
+	
+
+
+
 
 		<div id="pics">
 		<video src="simpson.mp4" autoplay width="255" height="255" />
@@ -241,14 +266,33 @@ fclose($myfile);
 		</div>		
 
 
-	
+
+						
+<!-- AJAX-it për lexim dhe update-im nga një DB -->				
+
+
+                
+<form>
+	<select name="users" onchange="showUser(this.value)">
+	  <option value="">Select something about foods:</option>
+	  <option value="1">5 World Famous Foods</option>
+	  <option value="2">5 Foods To Avoid</option>
+	  <option value="3">5 Foods Induce Memory Loss</option>
+	  
+	  </select>
+</form>
+<br>
+<div id="txtHint"><b>Foods info will be listed here...</b></div>
+
+
 		
-		
-            <h2>POLLS</h2> 
+          
 			
-            <div id="Sondazhi">           
+            <div id="Sondazhi">  
+             			
             <div class="poll">
-                <h4>For which of the foods listed in our website are you more interested in?</h4>
+			  
+                <h4><b>POLLS :</b><br><br>For which of the foods listed in our website are you more interested in?</h4>
                 <form>
                 <input type="checkbox" name="q1" value="checked">Italian<br/>
                 <input type="checkbox" name="q1" value="checked" checked>Mexican<br/>
@@ -317,44 +361,6 @@ echo "<h6>The number of  orders on this page is already " . $order . ". You can 
 <br>
 </div>
 				
-				
-	
-
-
-<!--Listat-->				
-			<div id="listat">
-
-                <ul>
-                    <h4><li>5 World Famous Foods</li></h4>
-                    <ol>
-                        <li>Pizza</li>
-                        <li>Burger</li>
-                        <li>Rice</li>
-                        <li>Tacos</li>
-                        <li>Pasta</li>
-                    </ol>
-                   
-                    <h4><li>5 Foods To Avoid</li></h4>
-                        <ol>
-                            <li>French Fries</li>
-                            <li>White Bread</li>
-                            <li>Oily Foods</li>
-                            <li>Eggs</li>
-                            <li>Meat</li>
-                        </ol>
-                 
-                    <h4><li>5 Foods Induce Memory Loss</li></h4>
-                        <ol>
-                            <li>Pasta</li>
-                            <li>Cakes</li>
-                            <li>White Sugar</li>
-                            <li>White Rice</li>
-                            <li>Cakes</li>
-                        </ol>
-                  
-                </ul>
-                </div>
-				
 
 					
 <!--Follow Us-->			
@@ -371,6 +377,10 @@ echo "<h6>The number of  orders on this page is already " . $order . ". You can 
             </section>
         </div>
 
+				
+
+		
+
 <!--Web API me twitter-->
 <div class="twitter">
 <div class="twitterapi">
@@ -379,7 +389,7 @@ $variable = "seeing";
 
 switch ($variable) {
     case "seeing":
-        echo "<i>● • Click <a href='twitter.php' target='_blank'>here</a> to see our posts on twitter! • ● </i>";
+        echo "<i>● • Some Tweets <a href='twitter.php' target='_blank'>here</a> to see  • ● </i>";
         break;
     case "notseeing":
         echo "Don't click the link to see our posts on twitter!";
