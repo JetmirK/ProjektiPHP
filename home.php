@@ -14,8 +14,8 @@ session_start();
 		<style type="text/css">
 			
 			
-			
-			
+	
+	
     .ushqimet{
 	font-size:1em;
 	font:bold;
@@ -26,6 +26,7 @@ session_start();
     background-color:rgba(224, 224, 209, 0.7);
     border: 3px solid #f5f5f0;
 	border-radius: 8px;	
+	
 			}
 
 	.twitter{
@@ -35,6 +36,7 @@ session_start();
 	float:left;
     width: 280px;
     background-color:rgba(224, 224, 209, 0.7);
+	margin-bottom: 50px;
     }
 
 
@@ -85,11 +87,8 @@ function showUser(str) {
 		   <div id="nav">
                 <ul>
                     <li><a href="home.php">Home</a></li>
-                    <li><a href="ItalianFood.php">Italian Food</a></li>
-                    <li><a href="mexican.php">Mexican Food</a></li>
+                    <li><a href="italian.php">Italian Food</a></li>
                     <li><a href="chinese.php">Chinese Food</a></li>
-					<li><a href="american.php">American Food</a></li>
-				    <li><a href="AlbanianFood.php">Albanian Food</a></li>
 					<li><a href="contacts.php">Contacts</a></li>
 					<li><a href="login.php">Log In</a></li>
                 </ul>
@@ -114,16 +113,68 @@ function myTest() {
 myTest();
 ?> 
             </section> 
-			<div class="text">
-			    <h3>Mexican Food</h3>
-                <img src="images\mexican.jpg" width=400 height=200>
+			 <div class="text">
+			    <h3>American Food</h3>
+                <img src="images\american.png" width=400 height=200>
                
-                <p>
-                Mexican cuisine is an important aspect of the culture, social structure and popular traditions of Mexico. The most important example of this connection is the use of mole for special occasions and holidays, particularly in the South and Central regions of the country. Traditional Mexican cuisine was inscribed in 2010.</p> 	
+                <p>American cuisine reflects the history of the United States, blending the culinary contributions of various groups of people from around the world, including indigenous American Indians, African Americans, Asians, Europeans, Pacific Islanders, and South Americans.When the colonists came to the colonies, they farmed animals for clothing and meat in a similar fashion to what they had done in
+				Europe .		<br><br>
+<!--perdorimi i explode,implode,trim -->				
+<?php
+$american ="American foods are delicious";
+print_r (explode(" ",$american));
+?> <br> <br>
+<b>Now let's take that array and form it in a full sentence.</b><br> 
+ <?php
+$americanfood = array('American','foods','are','delicious.');
+echo implode(" ",$americanfood);
+?> <br> <br>
+<?php
+echo "There's a food named Scrapple aka Pork Mush. But since the name is quite weird and not easily stuck in mind 
+you can also refer to it as ";
+$remove = "Scrapple aka Pork Mush.";
+echo trim($remove,"Scrapple aka Pork!");
+?>
+             </p>
+                
             </div>
-  
+			<div class="text">
+			    <h3>Albanian Food</h3>
+                <img src="images\albanian.jpg" width=400 height=200>
+                
+                <p>
+                  The cuisine of the central region is threefold of rural, mountainous and coastal. The central region is the flattest and rich in vegetation and biodiversity as well as culinary specialties. It has Mediterranean characteristics due to its proximity to the sea, which is rich in fish. Dishes here include several meat specialties and desserts of all kinds.
+
+In the south, the cuisine is composed of two components: the rural products of the field including dairy products, citrus fruits and olive oil, and coastal products, i.e. seafood. Those regions are particularly conducive to raising animals, as pastures and feed resources are abundant.
+
+Besides garlic, onions are arguably the country's most widely used ingredient. 
+<!--Exception-->
+<?php
+    $_number = 7 ;
+    
+    try{
+        
+        if( !is_numeric($_number) ){
+           throw new InvalidArgumentException('The variable must be a number!'); 
+        }
+        
+        if( ($_number < 1) || ($_number > 100) ){
+           throw new OutOfRangeException('The variable must be from 1 to 100.'); 
+        }
+        
+        echo  $_number.' ';
+        
+    }catch( Exception $e ){
+        die( $e->getMessage() );
+    }
+?>
+Delicious Food to Try in Albania : Byrek,TavëKosi,Kaçkavall,Baklava,Flija,Pite,Trilece .
+</p>      
+            
+            </div>
+			 
+            
 	
-    	
             <div class="text">
 			        <h3>Italian Food</h3>
                     <?php
@@ -178,27 +229,8 @@ session_destroy();
                </p>      
             </div>
             
-            <div class="text">
-			    <h3>American Food</h3>
-                <img src="images\american.png" width=400 height=200>
-               
-                <p>American cuisine reflects the history of the United States, blending the culinary contributions of various groups of people from around the world, including indigenous American Indians, African Americans, Asians, Europeans, Pacific Islanders, and South Americans.When the colonists came to the colonies, they farmed animals for clothing and meat in a similar fashion to what they had done in Europe.
-             </p>
-                
-            </div>
+          
             
-            <div class="text">
-			    <h3>Albanian Food</h3>
-                <img src="images\albanian.jpg" width=400 height=200>
-                
-                <p>
-                  The cuisine of the central region is threefold of rural, mountainous and coastal. The central region is the flattest and rich in vegetation and biodiversity as well as culinary specialties. It has Mediterranean characteristics due to its proximity to the sea, which is rich in fish. Dishes here include several meat specialties and desserts of all kinds.
-
-In the south, the cuisine is composed of two components: the rural products of the field including dairy products, citrus fruits and olive oil, and coastal products, i.e. seafood. Those regions are particularly conducive to raising animals, as pastures and feed resources are abundant.
-
-Besides garlic, onions are arguably the country's most widely used ingredient. Albania is ranked second in the world in terms of onion consumption per capita</p>      
-            
-            </div>
 		</article>	
 			
 
@@ -242,12 +274,38 @@ fclose($myfile);
         
 <aside>
 
+
 		
 <!--Ora-->
 
-        
+		<!--perdorimi i preg_replace-->
+<?php
+
+$text = "We at FoodsBlog advertise for food. Foods.com";
+
+$text = preg_replace("/Foods/", '<span style="background:yellow">Foods</span>', $text);
+
+echo $text;
+
+?>
+
+<br><br>
+<!--perdorimi i preg_match-->
+
+<?php
+$my_url = "www.foods.com";
+if (preg_match("/food/", $my_url))
+{
+	echo "The url $my_url contains food";
+}
+else
+{
+	echo "The url $my_url does not contain food";
+}
+?>
 		<div class="all">
-       
+
+	   
         <?php
         echo "*Today is " . date("Y/m/d") . "<br>";
         echo "*Today is " . date("l");
@@ -258,12 +316,6 @@ fclose($myfile);
 	
 
 
-
-
-		<div id="pics">
-		<video src="simpson.mp4" autoplay width="255" height="255" />
-
-		</div>		
 
 
 
@@ -372,12 +424,14 @@ echo "<h6>The number of  orders on this page is already " . $order . ". You can 
                 <li><a href="https://www.twitter.com/" target="_blank"><img src="images\Twitter.png" alt="Twitter"></a></li>
                 <li><a href="https://plus.google.com/" target="_blank"><img src="images\Google+.png" alt="Google Plus"></a></li>
                 <li><a href="https://www.yahoo.com/" target="_blank"><img src="images\Yahoo.png" alt="Yahoo"></a></li>
+				
 				   				
             </ul>
             </section>
+			
         </div>
 
-				
+
 
 		
 
@@ -400,6 +454,10 @@ switch ($variable) {
 ?>
 </div>
 </div>
+
+
+<br><br>
+
 
 </aside>
 	
