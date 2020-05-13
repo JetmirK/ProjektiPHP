@@ -1,0 +1,344 @@
+body{
+    font-family: Verdana, Arial, sans-serif;
+     background: url(images/a.jpg);
+     background-attachment: fixed;
+     background-repeat: no-repeat;
+     background-position:50%;
+	
+     background-size: 1400px;
+    }
+	
+
+header{
+	background: url(images/a.jpg);
+    width: 100%;
+    height:130px;
+	    
+ }	
+
+* {
+   padding: 0;
+   margin: 0;	
+
+
+  }
+
+
+header nav{
+  
+  display: inline;
+   
+ position: relative;
+   
+ float: right;
+   
+ margin: 0.7em 5em 3em 3em;
+}
+
+h2 {
+	padding-top:0.5em;
+
+	padding-left:2em;
+   
+ color: black;
+  
+  text-align: left;
+}
+
+
+header ul{
+    list-style-type: none;
+ 
+   margin:0em 0 ;
+    
+padding:3em 0 0 0.2em;
+}
+
+header li{
+   
+ display: inline;
+  
+  padding: 0.5em 2em;
+  
+  font-family: sans-serif;
+ 
+   font-weight: bold;
+	
+border: solid 1px #ffffff;
+
+	background-color: rgba(255, 255, 255, 0.3);	
+
+}
+
+
+header li a{
+    
+color: black;
+  
+  text-decoration:none;
+	
+margin: 0.5em 0.5em;
+	
+}
+
+header li a:hover{
+   
+ color:white;
+}
+
+header form{
+    
+padding-top:0em;
+   
+ margin-bottom: 70em;
+}
+/*Animacioni*/
+.animacion1 {
+	
+	position: absolute;
+    top: 15em;
+	left: 60em;
+	right: 0em;
+    width: 80px;
+    height: 20px;
+	animation-name: stretch;
+	animation-duration: 1s; 
+	animation-timing-function: ease-out; 
+	animation-delay: 0;
+	animation-direction: alternate;
+	animation-iteration-count: infinite;
+	animation-fill-mode: none;
+	animation-play-state: running;
+}
+
+
+@keyframes stretch {
+  0% {
+    transform: scale(.3);
+    border-radius: 100%;
+  }
+  50% {
+    
+  }
+  100% {
+    transform: scale(1.5);
+  
+  }
+}
+.animacion2 {
+  
+  position: absolute;
+    top: 100em;
+  left: 60em;
+  right: 0em;
+    width: 80px;
+    height: 20px;
+    animation-name: stretch;
+    animation-duration: 1s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+
+@keyframes stretch {
+  0% {
+    transform: scale(.3);
+    border-radius: 100%;
+  }
+  50% {
+    
+  }
+  100% {
+    transform: scale(1.5);
+  
+  }
+}
+.animacion3 {
+  
+    position: absolute;
+    top: 167em;
+    left: 60em;
+    right: 0em;
+    width: 80px;
+    height: 20px;
+    animation-name: stretch;
+    animation-duration: 1s; 
+    animation-timing-function: ease-out; 
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-fill-mode: none;
+    animation-play-state: running;
+}
+
+
+@keyframes stretch {
+  0% {
+    transform: scale(.3);
+    border-radius: 100%;
+  }
+  50% {
+    
+  }
+  100% {
+    transform: scale(1.5);
+  
+  }
+}
+
+/*Artikujt*/
+.chinese img{
+    width:400px;
+    height: 200px;
+    margin: 2em;
+    float:left;
+	border: solid 1px black;
+	border-radius: 15px;
+}
+.chinese1 img{
+    width:390px;
+    height: 360px;
+    margin: 2em;
+    float:left;
+  border: solid 1px black;
+  border-radius: 15px;
+}
+.chinese2 img{
+    width:400px;
+    height: 220px;
+    margin-bottom: : 2em;
+    margin-top: 2em;
+    margin-right: 4em;
+    float:left;
+  border: solid 1px black;
+  border-radius: 15px;
+}
+
+.chinese{ 
+    float:left;
+    width: 1200px;
+    margin-top: 5em;
+    margin-bottom: 4em;
+	margin-right: 6em;
+    font-size: 18px;
+    background:url(images/ricebackground.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+     
+     background-size: 1200px;
+
+     background-position: all;
+    
+    overflow: auto;
+	margin: 3em;
+	border-radius: 15px;
+	}
+  .chinese1{ 
+    float:left;
+    width: 1200px;
+    margin-top: 5em;
+    margin-bottom: 4em;
+  margin-right: 6em;
+    font-size: 18px;
+    
+    background:url(images/noodlesbackground.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+     
+     background-size: 1200px;
+
+     background-position: all;
+
+    overflow: auto;
+  margin: 3em;
+  border-radius: 15px;
+  }
+  .chinese2{ 
+    float:left;
+    width: 1200px;
+    margin-top: 5em;
+    margin-bottom: 4em;
+  margin-right: 6em;
+    font-size: 18px;
+    font-style: italic;
+    background:url(images/pancakebackground.jpg);
+
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+     
+     background-size: 1200px;
+
+     background-position: all;
+
+    overflow: auto;
+  margin: 3em;
+  border-radius: 15px;
+  }
+	
+.chinese h3{
+    margin-left: 2em;
+    font-size: 2em;
+    margin-bottom: 0.35em;
+	margin-top: 1em;
+}
+.chinese1 h3{
+    margin-left: 2em;
+    font-size: 2em;
+    margin-bottom: 0.35em;
+  margin-top: 1em;
+	
+	
+}
+.chinese2 h3{
+    margin-left: 2em;
+    font-size: 2em;
+    margin-bottom: 0.35em;
+  margin-top: 1em;
+  
+  
+}
+.chinese p{
+    margin-top: 0.32em;
+	margin-right: 16em;
+	margin-bottom: 4em;
+	font-size: 20px;
+	
+	
+}
+.chinese1 p{
+    margin-top: 0.32em;
+  margin-right: 16em;
+  margin-bottom: 4em;
+
+  font-size: 20px;
+  
+
+  
+}
+.chinese2 p{
+    margin-top: 0.32em;
+  margin-right: 16em;
+  margin-bottom: 4em;
+
+  font-size: 20px;
+  
+
+  
+}
+
+aside {
+    position: right;
+    top: 1em;
+    width: 18em;
+    margin-top: 4em;
+    margin-left: 65em;
+}
+
+
+
+
+
