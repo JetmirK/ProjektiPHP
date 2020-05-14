@@ -126,9 +126,9 @@ multipleparameters("E-mails", "us");
 
 <figure>
 <div class="map">
-<img src="map.png" class="w3-circle" title="map" alt="map photo" width=250 height=200>
+<img src="">
 <figcaption>
-<pre><strong> Note:</strong>This is our location.</pre>
+<pre><strong> </strong></pre>
 </figcaption>
 <figure>
 
@@ -139,12 +139,11 @@ multipleparameters("E-mails", "us");
 <!--Associative Arrays-->
 <p> 
   <?php
-$members = array("FIEK"=>"4", "FIM"=>"7", "FNA"=>"10");
-echo "We are " .$members['FIEK'] . " students of computer engineering and we worked together on building this website. All of the food lovers are welcomed in our website.";
+$members = array("nje"=>"food", "dy"=>"website", "tre"=>"10");
+echo "All of the " .$members['nje'] . "   lovers are welcomed in our website.";
 ?>
 </p>
 
-<mark> Thank You </mark>
 <br>
 <button id="hide">Hide</button>
 
