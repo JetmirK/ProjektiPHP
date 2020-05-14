@@ -48,11 +48,8 @@ function showHint(str) {
 		   <div id="nav">
                 <ul>
                     <li><a href="home.php">Home</a></li>
-                    <li><a href="ItalianFood.php">Italian Food</a></li>
-                  
+                    <li><a href="italian.php">Italian Food</a></li>
                     <li><a href="chinese.php">Chinese Food</a></li>
-					<li><a href="american.php">American Food</a></li>
-				    <li><a href="AlbanianFood.php">Albanian Food</a></li>
 					<li><a href="contacts.php">Contacts</a></li>
 					<li><a href="login.php">Log In</a></li>
                 </ul>
@@ -62,7 +59,7 @@ function showHint(str) {
 
 <div class="card middle">
       <div class="front">
-        <img src="ph5.jpg" alt="">
+        <img src="images/ph5.jpg" alt="">
       </div>
       <div class="back">
         <div class="back-content middle">

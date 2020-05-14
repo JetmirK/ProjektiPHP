@@ -115,7 +115,7 @@ myTest();
             </section> 
 			 <div class="text">
 			    <h3>American Food</h3>
-                <img src="images\american.png" width=400 height=200>
+                <img src="images\american.jpg" width=400 height=200>
                
                 <p>American cuisine reflects the history of the United States, blending the culinary contributions of various groups of people from around the world, including indigenous American Indians, African Americans, Asians, Europeans, Pacific Islanders, and South Americans.When the colonists came to the colonies, they farmed animals for clothing and meat in a similar fashion to what they had done in
 				Europe .		<br><br>
@@ -241,42 +241,32 @@ session_destroy();
                 <h2>Other interesting foods of different countries</h2>
 <!--Perdorimi i preg_split-->				
 <?php
-    $sentence="<h3>Click on the photo to watch a documentary about those foods </h3> ";
+    $sentence="<h3>Click on the photo to watch a documentary</h3> ";
     $result=preg_split ('/  /',$sentence);
     foreach ($result as $content)
     {echo $content."<br>" ;
         
     }
 ?>                </section>
-                <table cellpadding="5">
-                    <tr>
-                        <td><a href="https://www.youtube.com/watch?v=F5-nfxQjfZU" target="_blank"><img src="images\padthai.jpg" width=140 height=200  ></a></td>
-                        <td><a href="https://www.youtube.com/watch?v=Q1-GiGhDf28" target="_blank"><img src="images\curry.jpg" width=140 height=200  ></a></td> 
-                        <td><a href="https://www.youtube.com/watch?v=IUX0FH8mERQ" target="_blank"><img src="images\spicy.jpg" width=140 height=200 ></a></td>
-                        <td><a href="https://www.youtube.com/watch?v=dHEuOPjdjJg" target="_blank"><img src="images\noodels.jpg" width=140 height=200 ></a></td> 
-                    </tr>
-                    <tr>
-                        <th><font size="5" color="white">Pad Thai | </font></th>
-                        <th><font size="5" color="white">Penang Curry | </font></th>
-                        <th><font size="5" color="white">Spicy Curry |</font></th>
-                        <th><font size="5" color="white">Noodles</font></th>
-                    </tr>
-                </table>
+               
+                        <a href="https://www.youtube.com/watch?v=dHEuOPjdjJg" target="_blank"><img src="images\noodels.jpg" width=400 height=300 ></a>
+                   
+                        <p><font size="5" color="white">Noodles</font></p>
+                  
 
-                <!--Perdorimi i funksionit per lexim nga fajllat-->
+ <p>               <!--Perdorimi i funksionit per lexim nga fajllat-->
 <?php
 $myfile = fopen("FoodThing.txt", "r") or die("Unable to open file!");
 echo fread($myfile,filesize("FoodThing.txt"));
 fclose($myfile);
 ?>
-
+</p>
             </div>
         
 <aside>
 
 
 		
-<!--Ora-->
 
 		<!--perdorimi i preg_replace-->
 <?php
@@ -289,7 +279,7 @@ echo $text;
 
 ?>
 
-<br><br>
+<br><br><br>
 <!--perdorimi i preg_match-->
 
 <?php
@@ -303,6 +293,8 @@ else
 	echo "The url $my_url does not contain food";
 }
 ?>
+<!--Ora-->
+
 		<div class="all">
 
 	   
@@ -311,9 +303,6 @@ else
         echo "*Today is " . date("l");
         ?>
 		</div>
-
-
-	
 
 
 
