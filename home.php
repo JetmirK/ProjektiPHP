@@ -40,22 +40,6 @@ session_start();
     }
 
 
-.all {
-  width: 251px;
-  height:75px;
-  font-size: 1em;
-  font-weight:bold;
-  background-color:rgba(255, 0, 0, 0.1);
-  position:relative;
-  margin-top:3em;
-  margin-bottom:1.5em;
-  padding-top:2em;
-  padding-bottom:0.2em;
-  text-align: center;
-  border:solid 1px #669999;
-}
-
-
 			
 		</style>
 		<script>
