@@ -193,32 +193,12 @@ aside{
 aside h2{
     color:black;
    
- position:absolute;
+    position:absolute;
 	margin-top:13.5em;
 	}
 	
 
 
-/*Ora*/	
-#all {
-  width: 251px;
-  height:75px;
- 
- font-size: 1em;
-  font-weight:bold;
- 
- background: rgba(12, 217, 140, 0.7);
- 
- position:relative;
-  margin-top:3em;
-  margin-bottom:200px;
- 
- padding-top:2em;
-  padding-bottom:0.9em;
-  
-text-align: center;
-  border:solid 1px #669999;
-}
 
 
 

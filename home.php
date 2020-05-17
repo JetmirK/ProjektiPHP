@@ -113,6 +113,7 @@ function myTest() {
 myTest();
 ?> 
             </section> 
+			
 			 <div class="text">
 			    <h3>American Food</h3>
                 <img src="images\american.jpg" width=400 height=200>
@@ -267,19 +268,6 @@ fclose($myfile);
 
 
 		
-
-		<!--perdorimi i preg_replace-->
-<?php
-
-$text = "We at FoodsBlog advertise for food. Foods.com";
-
-$text = preg_replace("/Foods/", '<span style="background:yellow">Foods</span>', $text);
-
-echo $text;
-
-?>
-
-<br><br><br>
 <!--perdorimi i preg_match-->
 
 <?php
@@ -293,17 +281,8 @@ else
 	echo "The url $my_url does not contain food";
 }
 ?>
-<!--Ora-->
-
-		<div class="all">
-
-	   
-        <?php
-        echo "*Today is " . date("Y/m/d") . "<br>";
-        echo "*Today is " . date("l");
-        ?>
-		</div>
-
+<br>
+<br><br>
 
 
 
