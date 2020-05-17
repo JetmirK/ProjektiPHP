@@ -119,22 +119,70 @@ multipleparameters("E-mails", "us");
 
 
 <hr>
+<!--Perdorimi i funksionit per shkrim nga fajllat-->
+
+<?php
+$myfile = fopen("newfile.txt", "w") or die("Unable to open file!");
+$txt = "Klodian Krasniqi\n";
+fwrite($myfile, $txt);
+fclose($myfile);
+?>
+
+<br><br><br><br>
+
+<div class="welcome">
+<!--perdorimi i funksionit substr()-->
+<h2><?php
+echo substr("WELCOME ! Enjoy the blog, take your shoes off, make a cup of coffee and settle in. Deliciousness lies ahead.",10);
+?></h2>
 
 
-<figure>
-<div class="map">
-<img src="">
-<figcaption>
-<pre><strong> </strong></pre>
-</figcaption>
-<figure>
+
+
+</div>
+<br><br><br><br>
+<hr>
+<br>
+<!--Implementimi i nje trashegimie ne klasa-->
+<div class="strawberry" >
+<img src="images/strawberry.jpg" style="float:left;width:200px;margin-left:30px;height:200px;">
+<h4><?php
+class Fruit {
+  public $name;
+  public $color;
+  public function __construct($name, $color) {
+    $this->name = $name;
+    $this->color = $color;
+  }
+  protected function intro() {
+    echo "The fruit is {$this->name} and the color is {$this->color}.";
+  }
+}
+
+class Strawberry extends Fruit {
+  public function message() {
+    echo "Am I a fruit or a berry? ";
+    
+    $this -> intro();
+  }
+}
+$strawberry = new Strawberry("Strawberry", "red");  
+$strawberry->message(); 
+?></h4></img>
+</div>
+<br><br><br><br>
+<br><br><br><br>
+<br><br><br><br>
+
+
+
 
 <div class="info">
 <hr>
 <h3 id="aboutus">About Us</h3>
 
 <!--Associative Arrays-->
-<p> 
+<p> At Foods Blog, we’re always striving to surpass our best.
   <?php
 $members = array("nje"=>"food", "dy"=>"website", "tre"=>"10");
 echo "All of the " .$members['nje'] . "   lovers are welcomed in our website.";
@@ -148,8 +196,8 @@ echo "All of the " .$members['nje'] . "   lovers are welcomed in our website.";
 </div>
     </figure></div></figure>
 	
-	
-    <p><b>Start typing a name:</b> </p>
+	<!-- Përdorimi i AJAX-it nga një PHP skriptë -->
+    <p style="margin-top:30px;"><b>Start typing a name:</b> </p>
 <form>
     
 First name: <input type="text" onkeyup="showHint(this.value)">

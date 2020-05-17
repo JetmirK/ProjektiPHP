@@ -1,8 +1,7 @@
 body{
    font-family: Verdana, Arial, sans-serif;
-     background-image: url("12.jpg"); /* The image used */
-     background-color: #cccccc;          /* Used if the image is unavailable */
-
+     background-image: url("12.jpg"); 
+       
      background-attachment: fixed;
      background-repeat: no-repeat;
      background-position:50%;
@@ -99,7 +98,7 @@ padding-top:0em;
 table {
     font-family: arial, sans-serif;
     width:57%;
-   margin-left: 200px;
+    margin-left: 200px;
     }
 		
 table,td, th {
@@ -118,11 +117,6 @@ p
 font-size: 15px;
 }
 
-.map{
-	margin: 5em 26em 3em 2em;
-	font-size: 20px;
- 
-	}
 
 
 .info{
@@ -143,33 +137,14 @@ font-size: 15px;
 .info p{
 	font-size: 16px;
 	color:black;
-	 background-color:rgba(255,255,192, 0.7);
+	background-color:rgba(255, 255, 255, 0.5);
+	
 }
 
 
-mark{
-	background-color:yellow;
-    color: black;
-}
 
 h3 {
 	text-shadow: 1px 1px #8000ff;
-}
-
-#map {
-position: absolute;
- left:800px;
- top: 850px;
- width:280px;
- height: 280px;
-}
-.abc{
-  
-    
-  text-align: center;
-  margin-right:10px;
-  margin-left:10px;
-
 }
 
 
@@ -234,7 +209,6 @@ position: absolute;
 .card:hover > .back{
   transform: perspective(600px) rotateY(0deg);
 }
-
 
 
 
